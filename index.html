@@ -53,6 +53,7 @@ body {
 .carousel-caption {
   bottom: 3rem;
   z-index: 10;
+  color: #053667;
 }
 
 /* Declare heights because of positioning of img element */
@@ -65,6 +66,8 @@ body {
   left: 0;
   min-width: 100%;
   height: 32rem;
+  opacity: 0.3;
+  filter: alpha(opacity=30)  /* For IE 8 or earlier */
 }
 
 /* MARKETING CONTENT
@@ -186,16 +189,17 @@ body {
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="./static/img/bg6.png" class="img-responsive" alt="Headline 1">
+      <img src="./static/img/bg6.png" class="img-responsive"  alt="Headline 1">
       <div class="container">
         <div class="carousel-caption">
-          <h1>AI for Healthcare</h1>
-          <p>The Mayo Clinic Artificial Intelligence Symposium will bring together researchers from Mayo Clinic and external experts to learn about current AI activities in the healthcare domain and the rich varied possibilities of AI for healthcare.</p>
-          <p><a class="btn btn-lg btn-primary" href="https://ce.mayo.edu/research/content/artificial-intelligence-symposium-2020#group-tabs-node-course-default5" role="button">Register</a></p>
+          <h1>Artificial Intelligence Symposium 2020</h1>
+          <h2>May 12-13, 2020 | Mayo Civic Center</h2>
+          <!-- <p>The Mayo Clinic Artificial Intelligence Symposium will bring together researchers from Mayo Clinic and external experts to learn about current AI activities in the healthcare domain and the rich varied possibilities of AI for healthcare.</p> -->
+          <p style="margin: 25px;"><a class="btn btn-lg btn-primary" href="https://ce.mayo.edu/research/content/artificial-intelligence-symposium-2020#group-tabs-node-course-default5" role="button">Register</a></p>
         </div>
       </div>
     </div>
-    <div class="carousel-item">
+    <!-- <div class="carousel-item">
       <img src="./static/img/bg7.png" class="img-responsive" alt="Headline 2">
       <div class="container">
         <div class="carousel-caption">
@@ -214,7 +218,7 @@ body {
           <p><a class="btn btn-lg btn-primary" href="https://ce.mayo.edu/research/content/artificial-intelligence-symposium-2020#group-tabs-node-course-default5" role="button">Register</a></p>
         </div>
       </div>
-    </div>
+    </div> -->
   </div>
   <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
