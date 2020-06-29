@@ -1,644 +1,280 @@
 <!doctype html>
 <html lang="en">
+
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="description" content="Mayo Clinic AI Symposium 2020">
-<meta name="author" content="Huan He">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Mayo Clinic AI Symposium 2020">
+  <meta name="author" content="Huan He">
 
-<title>Mayo Clinic Artificial Intelligence Symposium</title>
+  <title>Mayo Clinic Artificial Intelligence Symposium</title>
 
-<link rel='shortcut icon' type='image/x-icon' href='./static/img/favicon.ico' />
-<!-- Bootstrap core CSS -->
-<link rel="stylesheet" href="./static/lib/bootstrap-4.3.1/css/bootstrap.min.css">
-<!-- Iconic -->
-<link rel="stylesheet" href="./static/lib/iconic-1.1.1/css/open-iconic-bootstrap.min.css">
+  <link rel='shortcut icon' type='image/x-icon' href='./static/img/favicon.ico' />
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="./static/lib/bootstrap-4.3.1/css/bootstrap.min.css">
+  <!-- Iconic -->
+  <link rel="stylesheet" href="./static/lib/iconic-1.1.1/css/open-iconic-bootstrap.min.css">
 
-<style>
-.bd-placeholder-img {
-  font-size: 1.125rem;
-  text-anchor: middle;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
+  <style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
 
-@media (min-width: 768px) {
-.bd-placeholder-img-lg {
-  font-size: 3.5rem;
-}
-}
-/* GLOBAL STYLES
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+
+    /* GLOBAL STYLES
 -------------------------------------------------- */
-/* Padding below the footer and lighter body text */
+    /* Padding below the footer and lighter body text */
 
-body {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-  color: #5a5a5a;
-}
+    body {
+      padding-top: 3rem;
+      padding-bottom: 3rem;
+      color: #5a5a5a;
+    }
 
-/* CUSTOMIZE THE CAROUSEL
+    /* CUSTOMIZE THE CAROUSEL
 -------------------------------------------------- */
-.card-title {
-  font-size: 1.2em;
-}
+    .card-title {
+      font-size: 1.2em;
+    }
 
-/* Carousel base class */
-.carousel {
-  margin-bottom: 4rem;
-}
-/* Since positioning the image, we need to help out the caption */
-.carousel-caption {
-  bottom: 3rem;
-  z-index: 10;
-  color: #053667;
-}
+    /* Carousel base class */
+    .carousel {
+      margin-bottom: 4rem;
+    }
 
-/* Declare heights because of positioning of img element */
-.carousel-item {
-  height: 32rem;
-}
-.carousel-item > img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  min-width: 100%;
-  height: 32rem;
-  opacity: 0.3;
-  filter: alpha(opacity=30)  /* For IE 8 or earlier */
-}
+    /* Since positioning the image, we need to help out the caption */
+    .carousel-caption {
+      bottom: 3rem;
+      z-index: 10;
+      color: #053667;
+    }
 
-.carousel .carousel-control { 
-  visibility: hidden; 
-  }
+    /* Declare heights because of positioning of img element */
+    .carousel-item {
+      height: 32rem;
+    }
 
-/* MARKETING CONTENT
+    .carousel-item>img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      min-width: 100%;
+      height: 32rem;
+      opacity: 0.3;
+      filter: alpha(opacity=30)
+        /* For IE 8 or earlier */
+    }
+
+    .carousel .carousel-control {
+      visibility: hidden;
+    }
+
+    /* MARKETING CONTENT
 -------------------------------------------------- */
 
-/* Center align the text within the three columns below the carousel */
-.marketing .col-lg-4 {
-  margin-bottom: 1.5rem;
-  text-align: center;
-}
-.marketing h2 {
-  font-weight: 400;
-}
-.marketing .col-lg-4 p {
-  margin-right: .75rem;
-  margin-left: .75rem;
-}
+    /* Center align the text within the three columns below the carousel */
+    .marketing .col-lg-4 {
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
 
-/* Featurettes
+    .marketing h2 {
+      font-weight: 400;
+    }
+
+    .marketing .col-lg-4 p {
+      margin-right: .75rem;
+      margin-left: .75rem;
+    }
+
+    /* Featurettes
 ------------------------- */
 
-.featurette-divider {
-  /* Space out the Bootstrap <hr> more */
-  /* margin: 5rem 0;  */
-  margin-bottom: 120px;
-}
+    .featurette-divider {
+      /* Space out the Bootstrap <hr> more */
+      /* margin: 5rem 0;  */
+      margin-bottom: 120px;
+    }
 
-/* Thin out the marketing headings */
-.featurette-heading {
-  font-weight: 300;
-  line-height: 1;
-  letter-spacing: -.05rem;
-}
+    /* Thin out the marketing headings */
+    .featurette-heading {
+      font-weight: 300;
+      line-height: 1;
+      letter-spacing: -.05rem;
+    }
 
 
-/* RESPONSIVE CSS
+    /* RESPONSIVE CSS
 -------------------------------------------------- */
 
-@media (min-width: 40em) {
-/* Bump up size of carousel content */
-.carousel-caption p {
-  margin-bottom: 1.25rem;
-  font-size: 1.25rem;
-  line-height: 1.4;
-}
+    @media (min-width: 40em) {
 
-.featurette-heading {
-  font-size: 50px;
-}
-}
+      /* Bump up size of carousel content */
+      .carousel-caption p {
+        margin-bottom: 1.25rem;
+        font-size: 1.25rem;
+        line-height: 1.4;
+      }
 
-@media (min-width: 62em) {
-.featurette-heading {
-  margin-top: 7rem;
-}
-}
+      .featurette-heading {
+        font-size: 50px;
+      }
+    }
 
-.bg-dark {
-  background-color: #053667 !important;
-}
-.nav-link {
-  color: white !important;
-}
+    @media (min-width: 62em) {
+      .featurette-heading {
+        margin-top: 7rem;
+      }
+    }
 
-.table td, .table th  {
-  vertical-align: middle;
-}
-</style>
+    .bg-dark {
+      background-color: #053667 !important;
+    }
+
+    .nav-link {
+      color: white !important;
+    }
+
+    .table td,
+    .table th {
+      vertical-align: middle;
+    }
+  </style>
 
 
 </head>
+
 <body>
   <header>
-<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark" style="padding: 25px 16px;">
-  <a class="navbar-brand" href="https://www.mayoclinic.org/" >
-    <img src="./static/img/mayo-logo-transbg.png" style="height: 60px; margin: 0 50px 0 10px;" alt="Mayo Logo">
-  </a>
-  <a class="navbar-brand" href="#" style="margin: 0 50px 0 0;">
-    Artificial Intelligence Symposium 2020
-  </a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarCollapse">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">
-          <span class="oi oi-home"></span>
-        </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#section-importantdates"> Important Dates</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#section-program"> Program</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#section-location"> Location</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#section-faculty"> Faculty</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#section-register">Registration</a>
-      </li>
-    </ul>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark" style="padding: 25px 16px;">
+      <a class="navbar-brand" href="https://www.mayoclinic.org/">
+        <img src="./static/img/mayo-logo-transbg.png" style="height: 60px; margin: 0 50px 0 10px;" alt="Mayo Logo">
+      </a>
+      <a class="navbar-brand" href="#" style="margin: 0 50px 0 0;">
+        Artificial Intelligence Symposium 2020
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+        aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">
+              <span class="oi oi-home"></span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#section-importantdates"> Important Dates</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#section-program"> Program</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#section-location"> Location</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#section-faculty"> Faculty</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#section-register">Registration</a>
+          </li>
+        </ul>
 
-  </div>
-</nav>
-</header>
+      </div>
+    </nav>
+  </header>
 
-<main role="main">
+  <main role="main">
 
-<div id="myCarousel" class="carousel" data-ride="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="./static/img/bg6.png" class="img-responsive"  alt="Headline 1">
-      <div class="container">
-        <div class="carousel-caption">
-          <h1>Artificial Intelligence Symposium 2020</h1>
-          <h2>September 15-16, 2020 (Tentative) | Mayo Civic Center</h2>
-          <!-- <p>The Mayo Clinic Artificial Intelligence Symposium will bring together researchers from Mayo Clinic and external experts to learn about current AI activities in the healthcare domain and the rich varied possibilities of AI for healthcare.</p> -->
-          <p style="margin: 25px;"><a class="btn btn-lg btn-primary" href="https://ce.mayo.edu/research/content/artificial-intelligence-symposium-2020#group-tabs-node-course-default1" role="button">Submit</a> <a class="btn btn-lg btn-primary" href="https://ce.mayo.edu/research/content/artificial-intelligence-symposium-2020#group-tabs-node-course-default5" role="button">Register</a></p>
+    <div id="myCarousel" class="carousel" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="./static/img/bg6.png" class="img-responsive" alt="Headline 1">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Artificial Intelligence Symposium 2020</h1>
+              <h2>Mayo Civic Center</h2>
+              <!-- <p>The Mayo Clinic Artificial Intelligence Symposium will bring together researchers from Mayo Clinic and external experts to learn about current AI activities in the healthcare domain and the rich varied possibilities of AI for healthcare.</p> -->
+              <p style="margin: 25px;"><a class="btn btn-lg btn-primary"
+                  href="#"
+                  role="button">Submit</a> <a class="btn btn-lg btn-primary"
+                  href="#"
+                  role="button">Register</a></p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</div>
 
 
-<!-- Marketing messaging and featurettes
+    <!-- Marketing messaging and featurettes
 ================================================== -->
-<!-- Wrap the rest of the page in another container to center all the content. -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
 
-<div class="container marketing">
-
-  
-  <div class="row" id="section-overview">
-    <div class="col-md-5">
-      <img src="./static/img/overview_mc.png" width="100%" alt="overview" style="border:1px solid black;">
-    </div>
-    <div class="col-md-7 align-self-center">
-      <p class="lead text-justify">
-        Mayo Clinic, driven by its values, adopts a future-forward approach to leading health care transformation. Leveraging medical excellence and digital health sciences, artificial intelligence plays a critical role.  The Mayo Clinic Artificial Intelligence Symposium aims to bring the health care AI community together to learn about current activities, share best practices, and foster collaborations toward digital health and medicine.
-      </p>
-      <p class="lead text-justify">Here is the link to our course website: <a href="https://ce.mayo.edu/research/content/artificial-intelligence-symposium-2020#group-tabs-node-course-default1" target="_blank">Link <span class="oi oi-external-link"></span> </a>
-        </p>
-    </div>
-  </div>
+    <div class="container marketing">
 
 
-  <hr class="featurette-divider">
-
-  <div class="row">
-    <div class="col-md-4">
-      <div class="card mb-4 shadow-sm">
-        <img src="./static/img/bg-schedule.png" width="100%" height="100%" alt="">
-        <div class="card-body">
-          <h4 class="card-title"><span class="oi oi-list"></span> PROGRAM</h4>
-          <p class="card-text">Check out this year's program</p>
-          <div class="d-flex justify-content-between align-items-center">
-            <a href="#section-program" class="stretched-link"><small class="text-muted"></small></a>
-          </div>
+      <div class="row" id="section-overview">
+        <div class="col-md-5">
+          <img src="./static/img/overview_mc.png" width="100%" alt="overview" style="border:1px solid black;">
+        </div>
+        <div class="col-md-7 align-self-center">
+          <p class="lead text-justify">
+            Mayo Clinic, driven by its values, adopts a future-forward approach to leading health care transformation.
+            Leveraging medical excellence and digital health sciences, artificial intelligence plays a critical role.
+            The Mayo Clinic Artificial Intelligence Symposium aims to bring the health care AI community together to
+            learn about current activities, share best practices, and foster collaborations toward digital health and
+            medicine.
+          </p>
+          <p class="lead text-justify">Here is the link to our course website: <a
+              href="#"
+              target="_blank">Link <span class="oi oi-external-link"></span> </a>
+          </p>
         </div>
       </div>
-    </div>
-    <div class="col-md-4">
-      <div class="card mb-4 shadow-sm">
-        <img src="./static/img/bg-location.jpg" width="100%" height="100%" alt="">
-        <div class="card-body">
-          <h4 class="card-title"><span class="oi oi-map-marker"></span> LOCATION</h4>
-          <p class="card-text">Join us in Rochester, MN</p>
-          <div class="d-flex justify-content-between align-items-center">
-            <a href="#section-location" class="stretched-link"><small class="text-muted"></small></a>
-          </div>
+
+
+      <hr class="featurette-divider">
+
+
+      <!-- /END THE FEATURETTES -->
+
+    </div><!-- /.container -->
+
+
+    <!-- FOOTER -->
+    <footer class="container">
+      <p><img src="./static/img/mayo-logo-bk.png" width="80px" alt=""></p>
+      <p class="float-right" style="font-size: .9em;"><a href="#">Back to top</a></p>
+
+      <div class="row">
+        <div class="col-md-8">
+          <p style="font-size: .9em;">&copy; 2019-2020 Mayo Foundation for Medical Education and Research. All rights
+            reserved.</p>
+        </div>
+        <div class="col-md-4">
+          <p class="float-right" style="font-size: .9em;">
+            <a href="https://www.mayoclinic.org/about-this-site/terms-conditions-use-policy">Terms and Conditions</a> |
+            <a href="https://www.mayoclinic.org/about-this-site/privacy-policy">Privacy Policy</a>
+          </p>
         </div>
       </div>
-    </div>
-    <div class="col-md-4">
-      <div class="card mb-4 shadow-sm">
-        <img src="./static/img/bg-faculty.png" width="100%" height="100%" alt="">
-        <div class="card-body">
-          <h4 class="card-title"><span class="oi oi-people"></span> FACULTY</h4>
-          <p class="card-text">Keynote Speakers and Committee</p>
-          <div class="d-flex justify-content-between align-items-center">
-            <a href="#section-faculty" class="stretched-link"><small class="text-muted"></small></a>
-          </div>
-        </div>
-      </div>
-    </div>
+    </footer>
+  </main>
 
-  </div>
-
-
-
-  <hr class="featurette-divider" id="section-program">
-
-  <div class="row">
-    
-    <div class="col-md-12">
-      <h2><span class="oi oi-list anchor"></span> PROGRAM</h2>
-      
-      <p>&nbsp;</p>
-    <h4>September 15, 2020 (Tentative)</h4>
-
-    <table class="table table-hover table-striped">
-      <thead>
-        <tr>
-          <th scope="col" width="180px">Time</th>
-          <th scope="col">Activity</th>
-          <th scope="col" width="150px">Location</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <th scope="row">7:00 AM</th>
-          <td>Breakfast and Registration</td>
-          <td>West Lobby</td>
-        </tr>
-        <tr>
-          <th scope="row">8:00 AM</th>
-          <td>
-            Welcome and Opening Comments
-          </td>
-          <td>Ballroom 1</td>
-        </tr>
-        <tr>
-          <th scope="row">8:30 - 9:50 AM</th>
-          <td>
-              <b>Session One: The Future of AI in Healthcare </b> <br>
-              <p class="text-justify">Hype and Hope have characterized AI in Healthcare so far. AI has now begun to transform the way we interact, consume information, and obtain services in healthcare.  This session will brainstorm the promise and potential of AI in all aspects of healthcare including optimizing care delivery, connecting people everywhere, and transforming healthcare through digital innovations. </p>
-            </td>
-          <td>Ballroom 1 </td>
-        </tr>
-        <tr>
-          <th scope="row" rowspan="2">9:50 - 10:10 AM</th>
-          <td>Refreshment Break</td>
-          <td>West Lobby</td>
-        </tr>
-        <tr>
-          <td>Poster Session 1 Open</td>
-          <td>Ballroom 3</td>
-        </tr>
-        <tr>
-          <th scope="row" rowspan="2">10:10 - 11:30 AM</th>
-          <td>Oral Presentations</td>
-          <td>Ballroom 1</td>
-        </tr>
-        <tr>
-          <td>Breakout Sessions</td>
-          <td>Suites</td>
-        </tr>
-        <tr>
-          <th scope="row" rowspan="2">11:30AM - 12:00PM </th>
-          <td>Poster Boaster</td>
-          <td>Ballroom 1</td>
-        </tr>
-        <tr>
-          <td>Breakout Sessions</td>
-          <td>Suites</td>
-        </tr>
-        <tr>
-          <th scope="row">12:00 - 1:00 PM</th>
-          <td>Lunch – Industry Booths/Poster Session</td>
-          <td>Ballroom 2 and 3</td>
-        </tr>
-        <tr>
-          <th scope="row">1:00 - 2:20 PM</th>
-          <td>
-              <b>Session Two: AI Development and Implementation</b><br>
-              <p class="text-justify">AI solutions are generally deliverables of team science collaboration, and the implementation is often the biggest and most challenging part. This session will discuss the technical and methodological advancements and challenges in AI, with the importance of the engagement of frontline clinical teams, patients, and caregivers. </p>
-          </td>
-          <td>Ballroom 1</td>
-        </tr>
-        <tr>
-          <th scope="row">2:20 - 2:40 PM</th>
-          <td>Refreshment Break</td>
-          <td>West Lobby</td>
-        </tr>
-        <tr>
-          <th scope="row"  rowspan="2">2:40 - 4:00 PM</th>
-          <td>Oral Presentations</td>
-          <td>Ballroom 1</td>
-        </tr>
-        <tr>
-          <td>Breakout Sessions</td>
-          <td>Suites</td>
-        </tr>
-
-        <tr>
-          <th scope="row" rowspan="2">4:00 - 5:00 PM</th>
-          <td>Poster Session (Odd Number)</td>
-          <td>Ballroom 3</td>
-        </tr>
-        <tr>
-          <td>Breakout Sessions</td>
-          <td>Suites</td>
-        </tr>
-        <tr>
-          <th scope="row">5:30 PM</th>
-          <td>Reception</td>
-          <td>TBA</td>
-        </tr>
-      </tbody>
-    </table>
-        
-    <p>&nbsp;</p>
-    <h4>September 16, 2020 (Tentative)</h4>
-    
-    <table class="table table-hover table-striped">
-      <thead>
-        <tr>
-          <th scope="col" width="180px">Time</th>
-          <th scope="col" >Activity</th>
-          <th scope="col" width="150px">Location</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <th scope="row">7:00 AM</th>
-          <td>Breakfast and Registration</td>
-          <td>West Lobby</td>
-        </tr>
-        <tr>
-          <th scope="row">8:00 - 8:10 AM</th>
-          <td>Welcome to Day 2</td>
-          <td>TBD</td>
-        </tr>
-        <tr>
-          <th scope="row">8:10 - 9:30 AM</th>
-          <td>
-              <b>Session Three: Privacy, Safety, and Regulatory </b> <br>
-              <p class="text-justify">Appropriate standards of AI require the balancing of concerns around privacy,  consent, risk management and liability associated with the technologies. This session will take a deep dive into the privacy, safety, and regulatory challenges faced in developing and implementing AI solutions for healthcare. </p>
-            </td>
-          <td>Ballroom 1</td>
-        </tr>
-        
-        <tr>
-          <th scope="row">9:30 - 10:00 AM</th>
-          <td>Poster Boaster</td>
-          <td>Ballroom 1</td>
-        </tr>
-        <tr>
-          <th scope="row">10:00 - 10:20 AM</th>
-          <td>Refreshment Break</td>
-          <td>West Lobby</td>
-        </tr>
-        <tr>
-          <th scope="row" rowspan="2">10:20 - 11:30 AM</th>
-          <td>Oral Presentations</td>
-          <td>Ballroom 1</td>
-        </tr>
-        <tr>
-          <td>Breakout Sessions</td>
-          <td>Suites</td>
-        </tr>
-
-        <tr>
-          <th scope="row" rowspan="2">11:30AM - 12:30PM</th>
-          <td>Poster Session (Even Number)</td>
-          <td>Ballroom 3</td>
-        </tr>
-        <tr>
-          <td>Breakout Sessions</td>
-          <td>Suites</td>
-        </tr>
-        <tr>
-          <th scope="row">12:30 - 1:30 PM</th>
-          <td>Lunch – Industry Booths/Poster Session</td>
-          <td>Ballroom 2 and 3</td>
-        </tr>
-        <tr>
-          <th scope="row">1:30 - 2:50 PM</th>
-          <td>
-              <b>Session Four: Ethics, Equality, and Humanity</b> <br>
-              <p class="text-justify">"<i>The needs of the patient come first</i>": ethical, equitable and transparent deployment of AI needs to be prioritized to ensure intended outcomes. This session will highlight the importance of understanding and assessing ethics, equality, and humanity when bringing AI into healthcare.</p> 
-            </td>
-          <td>Ballroom 1</td>
-        </tr>
-        <tr>
-          <th scope="row">2:50 - 3:10 PM</th>
-          <td>Refreshment Break</td>
-          <td>West Lobby</td>
-        </tr>
-        <tr>
-          <th scope="row" rowspan="2">3:10 - 4:10 PM</th>
-          <td>Oral Presentations</td>
-          <td>Ballroom 1</td>
-        </tr>
-        <tr>
-          <td>Breakout Sessions</td>
-          <td>Suites</td>
-        </tr>
-
-
-        <tr>
-          <th scope="row">4:10 - 4:20 PM</th>
-          <td>Closing Remarks</td>
-          <td>Ballroom 1</td>
-        </tr>
-      </tbody>
-    </table>
-    </div>
-  </div>
-
-  <hr class="featurette-divider"  id="section-location">
-
-  <div class="row">
-    <div class="col-md-3">
-
-      <h2><span class="oi oi-map-marker"></span> LOCATION</h2>
-      
-      <p class="text-justify">
-        Mayo Civic Center <br>
-        30 Civic Center Dr SE <br>
-        Rochester, MN 55904 <br>
-        <a href="https://mayociviccenter.com/plan-your-visit/2015-04-01-15-41-01" target="_blank">Directions and Parking <span class="oi oi-external-link"></span> </a>
-         <br>
-      </p>
-
-      <p>&nbsp;</p>
-
-      <h4>TRAVEL</h4>
-      <p class="text-justify">
-        Hotel information: <br>
-        <a href="https://www.experiencerochestermn.com/" target="_blank">TBA <span class="oi oi-external-link"></span> </a>
-      </p>
-    </div>
-
-    <div class="col-md-9">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2868.929663052396!2d-92.46144524221016!3d44.022847992350556!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87f9e1d7e73b6f89%3A0x67c34e22220d3344!2sMayo%20Civic%20Center!5e0!3m2!1sen!2sus!4v1575255443027!5m2!1sen!2sus" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
-    </div>
-  </div>
-
-  <hr class="featurette-divider" id="section-faculty">
-
-  <div class="row">
-    <div class="col-md-6">
-
-      <h2><span class="oi oi-people"></span> FACULTY</h2>
-      
-      <!-- 
-      <b>Keynote Speakers:</b> <br>
-
-      <ul>
-        <li>Gianrico Farrugia, M.D., President and CEO, Mayo Clinic</li>
-        <li>Steve Peters, M.D., CMIO, Mayo Clinic</li>
-        <li>FIRSTNAME LASTNAME, MSc, Ph.D., TBD</li>
-        <li>FIRSTNAME LASTNAME, M.D., TBD</li>
-      </ul>      
-      -->
-
-      <p><b>Course Director:</b> </p>
-      <p>&nbsp;&nbsp;&nbsp;&nbsp;
-        Steve Peters, M.D., CMIO, Mayo Clinic</p>
-
-      
-      <p><b>Program Chairs:</b></p>
-      <ul>
-        <li>Mark Foley</li>
-        <li>Hongfang Liu, Ph.D.</li>
-      </ul>      
-
-    </div>
-
-    <div class="col-md-6">
-
-      <p><b>Steering Committee:</b> </p>
-      <ul>
-        <li>Christopher Ross, CIO, Mayo Clinic</li>
-        <li>Rickey Carter, Ph.D.</li>
-        <li>Tufia Haddad, M.D.</li>
-        <li>Sharon Kirby, MSN, R.N.</li>
-        <li>Daryl Kor, M.D.</li>
-        <li>Peter Noseworthy, M.D.</li>
-        <li>Mark Siska, Pharm.D.</li>
-        <li>Chris Beltran, Ph.D.</li>
-        <li>Steve Traub, M.D.</li>
-      </ul>      
-    </div>
-  </div>
-
-  <hr class="featurette-divider" id="section-register">
-
-  <div class="row featurette">
-    <div class="col-md-12">
-      <h2><span class="oi oi-clipboard"></span> Registration</h2>
-      <p class="lead">
-        <a href="https://ce.mayo.edu/research/content/artificial-intelligence-symposium-2020#group-tabs-node-course-default5" target="_blank"> Register Now <span class="oi oi-external-link"></span></a>
-      </p>
-      <p><b>COST: $495.00</b></p>
-      <p class="lead">
-        Cancellation and Refund Policy:<br>
-        Request for cancellations must be submitted in writing to cme@mayo.edu. When cancelling a registration for a course 14 days or more before the course start date, a full refund (minus a $75 administrative fee) will be issued in the same form of payment the registration was received. No refunds are granted less than 14 days before the course start date.
-        Any use of this site constitutes your agreement to the Terms and Conditions of Online Registration.
-      </p>
-
-    </div>
-  </div>
-
-    <!-- START THE FEATURETTES -->
-    <hr class="featurette-divider" id="section-importantdates">
-
-    <div class="row">
-      <div class="col-md-12">
-        <h2><span class="oi oi-calendar"></span> IMPORTANT DATES</h2>
-  
-        <p class="lead">
-          &nbsp;
-        </p>
-        <table class="table table-striped" style="width: auto; ">
-          <thead>
-            <!-- <tr>
-              <th scope="col">Activity</th>
-              <th scope="col">Date</th>
-            </tr> -->
-          </thead>
-          <tbody>
-            <tr>
-              <td style="text-align: right;">Abstract submission deadline:</td>
-              <td >March 1, 2020</td>
-            </tr>
-            <tr>
-              <td style="text-align: right;">Notification of acceptance:</td>
-              <td>March 15, 2020</td>
-            </tr>
-            <tr>
-              <td style="text-align: right;">Conference:</td>
-              <td>September 15-16, 2020 (Tentative)</td>
-            </tr>
-          </tbody>
-        </table>
-        <p>
-        <ul>
-        <li><a href="https://ce.mayo.edu/node/94762" role="button">Abstract Submission</a></li>
-        <li><a href="https://ce.mayo.edu/content/breakout-session-submission-mayo-clinic-artificial-intelligence-symposium-2020" role="button">Breakout Session Submission</a></li>
-        </ul> 
-      </p>
-      </div>
-    </div>
-
-    <hr class="featurette-divider">
-
-  <!-- /END THE FEATURETTES -->
-
-</div><!-- /.container -->
-
-
-<!-- FOOTER -->
-<footer class="container">
-  <p><img src="./static/img/mayo-logo-bk.png" width="80px" alt=""></p>  <p class="float-right" style="font-size: .9em;"><a href="#">Back to top</a></p>
-
-  <div class="row">
-    <div class="col-md-8">
-      <p style="font-size: .9em;">&copy; 2019-2020 Mayo Foundation for Medical Education and Research. All rights reserved.</p>
-    </div>
-    <div class="col-md-4">
-      <p class="float-right" style="font-size: .9em;">
-          <a href="https://www.mayoclinic.org/about-this-site/terms-conditions-use-policy">Terms and Conditions</a> | 
-          <a href="https://www.mayoclinic.org/about-this-site/privacy-policy">Privacy Policy</a>
-      </p>
-    </div>
-  </div>
-</footer>
-</main>
-
-<script src="./static/lib/jquery-3.3.1/jquery-3.3.1.slim.min.js"></script>
-<script src="./static/lib/bootstrap-4.3.1/js/bootstrap.bundle.min.js"></script>
+  <script src="./static/lib/jquery-3.3.1/jquery-3.3.1.slim.min.js"></script>
+  <script src="./static/lib/bootstrap-4.3.1/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
